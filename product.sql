@@ -1,6 +1,6 @@
 SELECT
     Product.Name AS Product,
-    COALESCE(Category.Name, 'Без категории') AS Category
+    COALESCE(Category.Name, 'Without category') AS Category
 FROM 
     Product
 LEFT JOIN 
