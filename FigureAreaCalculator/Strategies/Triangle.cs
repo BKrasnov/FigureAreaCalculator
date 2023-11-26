@@ -41,16 +41,19 @@ namespace FigureAreaCalculator.Strategies
         /// Треугольник является прямоугольным, если один из его углов является прямым углом или если выполняется теорема Пифагора
         /// (т.е. a ^ 2 + b ^ 2 = c ^ 2).
         /// /// </remarks>
-        public bool IsRightAngled()
+        public bool IsRightAngled
         {
-            var a2 = Math.Pow(_aSide, SquarePower);
-            var b2 = Math.Pow(_bSide, SquarePower);
-            var c2 = Math.Pow(_cSide, SquarePower);
+           get
+            {
+                var a2 = Math.Pow(_aSide, SquarePower);
+                var b2 = Math.Pow(_bSide, SquarePower);
+                var c2 = Math.Pow(_cSide, SquarePower);
 
-            // Имеют ли какие - либо две стороны длины, удовлетворяющие теореме Пифагора
-            return Math.Abs(a2 + b2 - c2) < Epsilon ||
-               Math.Abs(a2 + c2 - b2) < Epsilon ||
-               Math.Abs(b2 + c2 - a2) < Epsilon;
+                // Имеют ли какие-либо две стороны длины, удовлетворяющие теореме Пифагора
+                return Math.Abs(a2 + b2 - c2) < Epsilon ||
+                   Math.Abs(a2 + c2 - b2) < Epsilon ||
+                   Math.Abs(b2 + c2 - a2) < Epsilon;
+            }
         }
     }
 }
