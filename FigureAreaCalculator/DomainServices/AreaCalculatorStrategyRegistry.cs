@@ -1,6 +1,5 @@
-﻿using FigureAreaCalculator.Domains;
+﻿using System;
 using FigureAreaCalculator.Strategies;
-using System;
 using System.Collections.Generic;
 
 namespace FigureAreaCalculator.DomainServices
@@ -18,11 +17,17 @@ namespace FigureAreaCalculator.DomainServices
             Register(new TriangleAreaCalculatorStrategy());
         }
 
+        /// <summary>
+        /// Зарегистрировать стратегию.
+        /// </summary>
         public void Register<TFigure>(IAreaCalculatorStrategy<TFigure> strategy)
         {
             strategies[typeof(TFigure)] = strategy;
         }
 
+        /// <summary>
+        /// Получить нужную стратегию по типу фигуры.
+        /// </summary>
         public IAreaCalculatorStrategy<TFigure> GetStrategy<TFigure>()
         {
             if (strategies.TryGetValue(typeof(TFigure), out var strategy))

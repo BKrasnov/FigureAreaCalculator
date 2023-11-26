@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureAreaCalculator", "Fig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureAreaCalculator.Tests", "..\FigureAreaCalculator.Tests\FigureAreaCalculator.Tests.csproj", "{D08DEE29-B119-4B9F-B0E3-27021FD97FED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureCalculateDemoApp", "..\FigureCalculateDemoApp\FigureCalculateDemoApp.csproj", "{88E468DD-B61B-4A84-8C25-A16CC6309A45}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D08DEE29-B119-4B9F-B0E3-27021FD97FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D08DEE29-B119-4B9F-B0E3-27021FD97FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D08DEE29-B119-4B9F-B0E3-27021FD97FED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E468DD-B61B-4A84-8C25-A16CC6309A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E468DD-B61B-4A84-8C25-A16CC6309A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E468DD-B61B-4A84-8C25-A16CC6309A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E468DD-B61B-4A84-8C25-A16CC6309A45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

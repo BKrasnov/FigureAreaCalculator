@@ -1,6 +1,6 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FigureAreaCalculator.Domains;
-using System;
 
 namespace FigureAreaCalculator.Tests
 {
