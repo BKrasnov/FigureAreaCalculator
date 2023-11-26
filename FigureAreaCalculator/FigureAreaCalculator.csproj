@@ -41,11 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Figure.cs" />
+    <Compile Include="DomainServices\AreaCalculatorStrategyRegistry.cs" />
+    <Compile Include="Domains\Circle.cs" />
+    <Compile Include="Domains\Triangle.cs" />
+    <Compile Include="AreaCalculatorStrategy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strategies\Circle.cs" />
-    <Compile Include="Strategies\IHaveArea.cs" />
-    <Compile Include="Strategies\Triangle.cs" />
+    <Compile Include="Strategies\CircleAreaCalculatorStrategy.cs" />
+    <Compile Include="Strategies\IAreaCalculatorStrategy.cs" />
+    <Compile Include="Strategies\TriangleAreaCalculatorStrategy .cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
