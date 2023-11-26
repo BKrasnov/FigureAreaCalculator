@@ -1,11 +1,10 @@
 ﻿using System;
 
-namespace FigureAreaCalculator.Strategies
+namespace FigureAreaCalculator.Domains
 {
-    public class Circle : IHaveArea
+    public class Circle
     {
-        private const int SquarePower = 2;
-        private readonly double _radius;
+        public double Radius { get; set; }
 
         /// <summary>
         /// Инициализирует новый экземпляр класса с указанным радиусом.
@@ -17,12 +16,7 @@ namespace FigureAreaCalculator.Strategies
             if (radius < 0)
                 throw new ArgumentException("Радиус должен быть положительным числом.");
 
-            _radius = radius;
+            Radius = radius;
         }
-
-        /// <summary>
-        /// Возвращает площадь круга.
-        /// </summary>
-        public double GetArea() => Math.PI * Math.Pow(_radius, SquarePower);
     }
 }
