@@ -30,10 +30,8 @@ namespace FigureAreaCalculator.DomainServices
         /// </summary>
         public IAreaCalculatorStrategy<TFigure> GetStrategy<TFigure>()
         {
-            if (strategies.TryGetValue(typeof(TFigure), out var strategy))
-            {
+            if (strategies.TryGetValue(typeof(TFigure), out var strategy)) 
                 return strategy as IAreaCalculatorStrategy<TFigure> ?? throw new InvalidOperationException($"Зарегистрированная стратегия для типа {typeof(TFigure)} имеет неправильный тип.");
-            }
 
             throw new ArgumentException($"Стратегия не зарегистрирована для типа {typeof(TFigure)}");
         }

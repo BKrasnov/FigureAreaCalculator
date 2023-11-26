@@ -1,7 +1,7 @@
 ﻿namespace FigureAreaCalculator.Strategies
 {
     /// <summary>
-    /// Общая стратегия для вычисления площади.
+    /// Интерфе общей стратегии для вычисления площади.
     /// </summary>
     public interface IAreaCalculatorStrategy<T>
     {

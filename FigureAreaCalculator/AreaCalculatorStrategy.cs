@@ -19,9 +19,8 @@ namespace FigureAreaCalculator
         public double GetArea(T figure)
         {
             if (figure == null)
-            {
                 throw new ArgumentNullException(nameof(figure));
-            }
+
             var strategy = strategyRegistry.GetStrategy<T>();
             return Math.Round(strategy.GetArea(figure), 2);
         }
