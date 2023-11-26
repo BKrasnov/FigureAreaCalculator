@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureAreaCalculator", "FigureAreaCalculator.csproj", "{0E15BA94-F226-430C-9D88-92EE0E9362AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FigureAreaCalculator.Tests", "..\FigureAreaCalculator.Tests\FigureAreaCalculator.Tests.csproj", "{D08DEE29-B119-4B9F-B0E3-27021FD97FED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E15BA94-F226-430C-9D88-92EE0E9362AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E15BA94-F226-430C-9D88-92EE0E9362AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E15BA94-F226-430C-9D88-92EE0E9362AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E15BA94-F226-430C-9D88-92EE0E9362AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D08DEE29-B119-4B9F-B0E3-27021FD97FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D08DEE29-B119-4B9F-B0E3-27021FD97FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D08DEE29-B119-4B9F-B0E3-27021FD97FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D08DEE29-B119-4B9F-B0E3-27021FD97FED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {781FA5B3-7278-4CBE-9CFB-B60355365E41}
+	EndGlobalSection
+EndGlobal
