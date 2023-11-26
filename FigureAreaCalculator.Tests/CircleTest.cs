@@ -13,9 +13,14 @@ namespace FigureAreaCalculator.Tests
         [DataRow(1, 3.14)]
         public void GetArea_ShouldCalculateCircleAreaCorrectly(double radius, double expected)
         {
+            // Arrange
             var areaCalculator = new AreaCalculatorStrategy<Circle>();
             var circle = new Circle(radius);
+
+            // Act
             var area = areaCalculator.GetArea(circle);
+
+            // Assert
             Assert.AreEqual(expected, area);
         }
 
@@ -24,7 +29,12 @@ namespace FigureAreaCalculator.Tests
         [DataRow(-1)]
         public void InvalidRadius_ThrowsArgumentException_OnInit(double radius)
         {
-            Assert.ThrowsException<ArgumentException>(() => new Circle(radius));
+            // Assert
+            Assert.ThrowsException<ArgumentException>(() =>
+            {
+                // Act
+                new Circle(radius);
+            });
         }
     }
 }

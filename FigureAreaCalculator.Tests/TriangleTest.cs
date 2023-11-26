@@ -13,7 +13,12 @@ namespace FigureAreaCalculator.Tests
         [DataRow(1, 2, -4)]
         public void InvalidSides_ThrowsArgumentException_OnInit(double aSide, double bSide, double cSide)
         {
-            Assert.ThrowsException<ArgumentException>(() => new Triangle(aSide, bSide, cSide));
+            // Assert
+            Assert.ThrowsException<ArgumentException>(() =>
+            {
+                // Act
+                new Triangle(aSide, bSide, cSide);
+            });
         }
 
         [TestMethod]
@@ -22,9 +27,15 @@ namespace FigureAreaCalculator.Tests
         [DataRow(5, 12, 13, 30)]
         public void Area_WithValidSides_ReturnsCorrectResult(double aSide, double bSide, double cSide, double expected)
         {
+            // Arrange
             var areaCalculator = new AreaCalculatorStrategy<Triangle>();
             var triangle = new Triangle(aSide, bSide, cSide);
-            Assert.AreEqual(expected, areaCalculator.GetArea(triangle));
+
+            // Act
+            var area = areaCalculator.GetArea(triangle);
+
+            // Assert
+            Assert.AreEqual(expected, area);
         }
 
         [TestMethod]
@@ -34,8 +45,14 @@ namespace FigureAreaCalculator.Tests
         [DataRow(3, 3, 5, false)]
         public void IsRightAngled_ReturnsExpectedResult(double aSide, double bSide, double cSide, bool expectedIsRightAngled)
         {
+            // Arrange
             var triangle = new Triangle(aSide, bSide, cSide);
-            Assert.AreEqual(expectedIsRightAngled, triangle.IsRightAngled);
+
+            // Act
+            var isRightAngled = triangle.IsRightAngled;
+
+            // Assert
+            Assert.AreEqual(expectedIsRightAngled, isRightAngled);
         }
     }
 }
