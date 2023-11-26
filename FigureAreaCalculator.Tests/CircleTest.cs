@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using FigureAreaCalculator.Strategies;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using FigureAreaCalculator.Domains;
+using System;
 
 namespace FigureAreaCalculator.Tests
 {
@@ -13,9 +13,18 @@ namespace FigureAreaCalculator.Tests
         [DataRow(1, 3.14)]
         public void GetArea_ShouldCalculateCircleAreaCorrectly(double radius, double expected)
         {
-            var circle = new Figure(new Circle(radius));
-            var area = circle.GetArea();
+            var areaCalculator = new AreaCalculatorStrategy<Circle>();
+            var circle = new Circle(radius);
+            var area = areaCalculator.GetArea(circle);
             Assert.AreEqual(expected, area);
+        }
+
+        [TestMethod]
+        [DataRow(-10)]
+        [DataRow(-1)]
+        public void InvalidRadius_ThrowsArgumentException_OnInit(double radius)
+        {
+            Assert.ThrowsException<ArgumentException>(() => new Circle(radius));
         }
     }
 }

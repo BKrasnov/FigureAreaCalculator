@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using FigureAreaCalculator.Strategies;
+using FigureAreaCalculator.Domains;
 
 namespace FigureAreaCalculator.Tests
 {
@@ -13,7 +14,7 @@ namespace FigureAreaCalculator.Tests
         [DataRow(1, 2, -4)]
         public void InvalidSides_ThrowsArgumentException_OnInit(double aSide, double bSide, double cSide)
         {
-            Assert.ThrowsException<ArgumentException>(() => new Figure(new Triangle(aSide, bSide, cSide)));
+            Assert.ThrowsException<ArgumentException>(() => new Triangle(aSide, bSide, cSide));
         }
 
         [TestMethod]
@@ -22,9 +23,9 @@ namespace FigureAreaCalculator.Tests
         [DataRow(5, 12, 13, 30)]
         public void Area_WithValidSides_ReturnsCorrectResult(double aSide, double bSide, double cSide, double expected)
         {
-            var triangle = new Figure(new Triangle(aSide, bSide, cSide));
-            var area = triangle.GetArea();
-            Assert.AreEqual(expected, area);
+            var areaCalculator = new AreaCalculatorStrategy<Triangle>();
+            var triangle = new Triangle(aSide, bSide, cSide);
+            Assert.AreEqual(expected, areaCalculator.GetArea(triangle));
         }
 
         [TestMethod]
